@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('Searcher behavior', function () {
+describe('validate logo', function () {
 
 
     it("validate logo name", function () {
@@ -7,6 +7,7 @@ describe('Searcher behavior', function () {
         cy.get(".brand.greenLogo").then(function (logoElement) {
             cy.log(logoElement.text())
             cy.wrap(logoElement).invoke("text").should("be.eq", "GREENKART")
+            cy.wrap(logoElement).should("have.text","GREENKART")
         })
     })
 })
