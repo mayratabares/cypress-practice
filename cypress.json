@@ -1,5 +1,5 @@
 {
     "chromeWebSecurity": false,
     "modifyObstructiveCode": true,
-    "experimentalSourceRewriting": true
+    "experimentalSourceRewriting": false
 }
