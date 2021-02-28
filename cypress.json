@@ -1,5 +1,6 @@
 {
     "chromeWebSecurity": false,
     "modifyObstructiveCode": true,
-    "experimentalSourceRewriting": false
+    "experimentalSourceRewriting": false,
+    "fixturesFolder": "cypress/fixtures"
 }
