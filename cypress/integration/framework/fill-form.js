@@ -10,7 +10,7 @@ describe('fill form', function () {
 
     it('go to fill name and gender', () => {
         const homePage = new HomePage()
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.visit(Cypress.env('url') + "/angularpractice/")
         homePage.getInputName().type(globalThis.data.name)
         homePage.getGender().select(globalThis.data.gender)
         homePage.getDataBinDing().should('have.value', globalThis.data.name)

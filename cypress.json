@@ -2,5 +2,9 @@
     "chromeWebSecurity": false,
     "modifyObstructiveCode": true,
     "experimentalSourceRewriting": false,
-    "fixturesFolder": "cypress/fixtures"
+    "fixturesFolder": "cypress/fixtures",
+    "defaultCommandTimeout": 8000,
+    "env": {
+        "url": "https://rahulshettyacademy.com"
+    }
 }
