@@ -1,10 +1,12 @@
 {
-    "chromeWebSecurity": false,
-    "modifyObstructiveCode": true,
-    "experimentalSourceRewriting": false,
-    "fixturesFolder": "cypress/fixtures",
-    "defaultCommandTimeout": 8000,
-    "env": {
-        "url": "https://rahulshettyacademy.com"
-    }
+  "chromeWebSecurity": false,
+  "modifyObstructiveCode": true,
+  "experimentalSourceRewriting": false,
+  "fixturesFolder": "cypress/fixtures",
+  "defaultCommandTimeout": 8000,
+  "reporter": "mochawesome",
+  "env": {
+    "url": "https://rahulshettyacademy.com"
+  },
+  "projectId": "o6uxcg"
 }
