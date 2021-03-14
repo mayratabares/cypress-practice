@@ -4,7 +4,10 @@
   "description": "cypress's practice with udemy course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules\\.bin\\cypress run",
+    "reports":"npm run test -- --reporter mochawesome",
+    "onlyFramework":"npm run test -- --spec \"cypress/integration/framework/*\""
+
   },
   "author": "Mayra Tabares",
   "license": "ISC",
