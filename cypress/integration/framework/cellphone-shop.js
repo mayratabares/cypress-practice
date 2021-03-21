@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import ProductsPage from '../pageObject/ProductsPage'
+import ProductsPage from '../../support/pageObject/ProductsPage'
 describe('shoping cellphones', function () {
 
     before(() => {

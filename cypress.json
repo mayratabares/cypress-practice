@@ -5,6 +5,7 @@
   "fixturesFolder": "cypress/fixtures",
   "defaultCommandTimeout": 8000,
   "reporter": "mochawesome",
+  "testFiles": "**/*.feature",
   "env": {
     "url": "https://rahulshettyacademy.com"
   },

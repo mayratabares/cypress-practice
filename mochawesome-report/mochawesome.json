@@ -1,16 +1,16 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 1,
-    "pending": 0,
+    "pending": 1,
     "failures": 0,
-    "start": "2021-03-14T21:50:51.231Z",
-    "end": "2021-03-14T21:50:57.271Z",
-    "duration": 6040,
-    "testsRegistered": 1,
+    "start": "2021-03-21T23:26:17.862Z",
+    "end": "2021-03-21T23:26:33.134Z",
+    "duration": 15272,
+    "testsRegistered": 2,
     "passPercent": 100,
-    "pendingPercent": 0,
+    "pendingPercent": 50,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
@@ -18,49 +18,73 @@
   },
   "results": [
     {
-      "uuid": "1a80eef4-daf9-49e7-b5a5-dd7fa154f4dc",
+      "uuid": "4d775f74-0211-4ece-b2b0-84e568aefc69",
       "title": "",
-      "fullFile": "cypress\\integration\\framework\\fill-form.js",
-      "file": "cypress\\integration\\framework\\fill-form.js",
+      "fullFile": "cypress\\integration\\BDD\\ecommerce.feature",
+      "file": "cypress\\integration\\BDD\\ecommerce.feature",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "025c47d3-6720-4f70-a97d-1ce84db9670d",
-          "title": "fill form",
+          "uuid": "0b85cd52-2f6e-4070-8a63-4700e3f41d25",
+          "title": "End to end Ecommerce validation",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "go to fill name and gender",
-              "fullTitle": "fill form go to fill name and gender",
+              "title": "add items to the shopping car",
+              "fullTitle": "End to end Ecommerce validation add items to the shopping car",
               "timedOut": null,
-              "duration": 4100,
+              "duration": 115,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:56919/__cypress/tests?p=cypress\\integration\\BDD\\ecommerce.feature:11836:10)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:56919/__cypress/tests?p=cypress\\integration\\BDD\\ecommerce.feature:11836:10)",
+                "diff": null
+              },
+              "uuid": "1e0bd991-23d6-4c45-9f48-dabbcb795917",
+              "parentUUID": "0b85cd52-2f6e-4070-8a63-4700e3f41d25",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "fill form",
+              "fullTitle": "End to end Ecommerce validation fill form",
+              "timedOut": null,
+              "duration": 6806,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "var homePage = new _HomePage[\"default\"]();\ncy.visit(Cypress.env('url') + \"/angularpractice/\");\nhomePage.getInputName().type(globalThis.data.name);\nhomePage.getGender().select(globalThis.data.gender);\nhomePage.getDataBinDing().should('have.value', globalThis.data.name);\nhomePage.getInputName().should('have.attr', 'minlength', 2);\nhomePage.getEntrepreneur().should('be.disabled');",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "926771b0-5f83-454f-a26e-24dad012608e",
-              "parentUUID": "025c47d3-6720-4f70-a97d-1ce84db9670d",
+              "uuid": "8f7df80b-5fb7-419b-8112-223f71c0d973",
+              "parentUUID": "0b85cd52-2f6e-4070-8a63-4700e3f41d25",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "926771b0-5f83-454f-a26e-24dad012608e"
+            "8f7df80b-5fb7-419b-8112-223f71c0d973"
           ],
           "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 4100,
+          "skipped": [
+            "1e0bd991-23d6-4c45-9f48-dabbcb795917"
+          ],
+          "duration": 6921,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
